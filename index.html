@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReclamosApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-content">
+      <div>
+        <p class="eyebrow">Simulador frontend</p>
+        <h1>ReclamosApp</h1>
+        <p class="app-description">
+          Sistema simple para registrar, filtrar y dar seguimiento a reclamos generales de clientes.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="panel form-panel" aria-labelledby="form-title">
+      <h2 id="form-title">Nuevo reclamo</h2>
+      <form id="claim-form" novalidate>
+        <div class="form-group">
+          <label for="cliente">Nombre del cliente</label>
+          <input type="text" id="cliente" name="cliente" placeholder="Ej: Ana Martinez">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="cliente@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="categoria">Categoría</label>
+          <select id="categoria" name="categoria">
+            <option value="">Seleccionar categoría</option>
+            <option value="Producto dañado">Producto dañado</option>
+            <option value="Demora en entrega">Demora en entrega</option>
+            <option value="Mala atención">Mala atención</option>
+            <option value="Error en cobro">Error en cobro</option>
+            <option value="Solicitud pendiente">Solicitud pendiente</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="prioridad">Prioridad</label>
+          <select id="prioridad" name="prioridad">
+            <option value="">Seleccionar prioridad</option>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" name="descripcion" rows="4" placeholder="Detalle breve del reclamo"></textarea>
+        </div>
+
+        <button class="primary-button" type="submit">Crear reclamo</button>
+      </form>
+    </section>
+
+    <section class="panel controls-panel" aria-labelledby="filters-title">
+      <div class="section-heading">
+        <h2 id="filters-title">Busqueda y filtros</h2>
+        <button class="secondary-button" id="clear-filters" type="button">Limpiar filtros</button>
+      </div>
+
+      <div class="filters">
+        <div class="form-group">
+          <label for="search">Buscar</label>
+          <input type="search" id="search" placeholder="Cliente, email o descripcion">
+        </div>
+
+        <div class="form-group">
+          <label for="filter-status">Estado</label>
+          <select id="filter-status">
+            <option value="">Todos</option>
+            <option value="Abierto">Abierto</option>
+            <option value="En proceso">En proceso</option>
+            <option value="Cerrado">Cerrado</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="filter-priority">Prioridad</label>
+          <select id="filter-priority">
+            <option value="">Todas</option>
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid" id="stats" aria-label="Estadísticas de reclamos"></section>
+
+    <section class="claims-section" aria-labelledby="claims-title">
+      <div class="section-heading">
+        <h2 id="claims-title">Listado de reclamos</h2>
+        <span class="muted" id="results-count"></span>
+      </div>
+      <div class="cards-grid" id="claims-list"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

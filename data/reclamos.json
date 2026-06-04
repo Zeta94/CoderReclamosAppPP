@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "cliente": "Laura Gomez",
+    "email": "laura.gomez@email.com",
+    "categoria": "Producto dañado",
+    "descripcion": "Recibió una cafetera con la jarra rota y solicita el cambio del producto.",
+    "estado": "Abierto",
+    "prioridad": "Alta",
+    "fecha": "2026-05-27"
+  },
+  {
+    "id": 2,
+    "cliente": "Martin Silva",
+    "email": "martin.silva@email.com",
+    "categoria": "Demora en entrega",
+    "descripcion": "El pedido figura en distribución hace varios días y aún no fue entregado.",
+    "estado": "En proceso",
+    "prioridad": "Media",
+    "fecha": "2026-05-29"
+  },
+  {
+    "id": 3,
+    "cliente": "Camila Torres",
+    "email": "camila.torres@email.com",
+    "categoria": "Error en cobro",
+    "descripcion": "Se registró un cobro duplicado en la tarjeta de crédito.",
+    "estado": "Abierto",
+    "prioridad": "Alta",
+    "fecha": "2026-06-01"
+  },
+  {
+    "id": 4,
+    "cliente": "Diego Fernandez",
+    "email": "diego.fernandez@email.com",
+    "categoria": "Mala atención",
+    "descripcion": "Indica que no recibió una respuesta clara durante la atención telefónica.",
+    "estado": "Cerrado",
+    "prioridad": "Baja",
+    "fecha": "2026-05-22"
+  },
+  {
+    "id": 5,
+    "cliente": "Sofia Perez",
+    "email": "sofia.perez@email.com",
+    "categoria": "Solicitud pendiente",
+    "descripcion": "Espera la aprobación de una solicitud enviada por el formulario de contacto.",
+    "estado": "En proceso",
+    "prioridad": "Media",
+    "fecha": "2026-05-31"
+  }
+]
